@@ -1,0 +1,278 @@
+@import 'normalize.css';
+@import 'layout';
+
+@mixin main-font {
+	font-family: Roboto, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 2;
+}
+@mixin title-font {
+	font-family: "Roboto Slab", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
+}
+$ptimary-color: #EDEFF1;
+$text-color: #31353e;
+$secondary-color: #dd4b2b;
+
+.ba-left {
+	float: left;
+}
+.ba-right {
+	float: right;
+}
+.ba-container {
+	width: 1170px;
+}
+.ba-btn {
+	@include title-font;
+	display: block;
+	width: 212px;
+	font-size: 18px;
+	font-weight: 400;
+	text-decoration: none;
+	padding: 20px 60px;
+	border-radius: 27px;
+	margin: auto;
+	cursor: pointer;
+	&--light {
+		background-color: #FFF;
+		color: #612316;
+	}
+	&--dark {
+		background-color: $secondary-color;
+		color: #fff;
+		float: left;
+		padding: 18px 71px;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		box-shadow: 0 0 15px rgba(0,0,0,.5)
+	}
+}
+.ba-panakeia {
+	background-color: $ptimary-color;
+	text-align: center;
+}
+
+// header part
+.ba-logo {
+	margin-top: 60px;
+}
+.ba-navigation {
+	&__list {
+		list-style-type: none;
+		padding: 50px 0;
+		margin: 0;
+	}
+	&__item {
+		float: left;
+	}
+	&__link {
+		@include title-font;
+		font-size: 18px;
+		font-weight: 400;
+		color: $text-color;
+		display: block;
+		text-decoration: none;
+		padding: 0 20px;
+		line-height: 50px;
+		transition-property: color, background-color;
+		transition: .2s ease-in;
+		background-color: transparent;
+		border-radius: transparent;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $secondary-color;
+			border-radius: 25px;
+			color: $ptimary-color;
+		}
+	}
+}
+
+// main part
+// banner
+.ba-banner {
+	background: url(../images/banner.jpg) center center no-repeat;
+	margin: auto;
+	padding: 220px 0 138px;
+	color: #FFF;
+}
+.ba-site-title {
+	@include title-font;
+	font-size: 72px;
+	font-weight: 300;
+	padding: 245px 0 0;
+	margin: 0 0 10px;
+}
+.ba-site-description {
+	@include title-font;
+	margin: 0 0 60px;
+}
+.ba-menu {
+	margin: 60px 0 34px;
+	&__image {
+		border: 7px solid #EDEFF1;
+		border-radius: 50%;
+	}
+	&__title {
+		@include title-font;
+		margin: 25px 0 15px;
+	}
+	&__description {
+		@include main-font;
+		width: 310px;
+		margin: auto;
+	}
+}
+
+// news part
+.ba-news {
+	padding: 70px 0 100px;
+	&__title {
+		@include title-font;
+		margin: 0 0 84px;
+	}
+}
+.ba-new {
+	&__image {
+		margin: 0 0 30px;
+	}
+	&__title {
+		@include title-font;
+		font-size: 24px;
+		margin: 0 0 5px;
+	}
+	&__description {
+		@include main-font;
+		width: 295px;
+		margin: 0 auto;
+	}
+	.ba-btn {
+		@include main-font;
+		color: #4e5159;
+		margin: 30px auto 0;
+		padding: 10px 30px;
+		width: 179px;
+		
+	}
+}
+
+// newsletter
+.ba-newsletter {
+	background: url(../images/newsletter-bg.jpg) center center no-repeat;
+	color: #FFF;
+	padding: 90px 0 110px;
+	&__title {
+		@include title-font;
+		margin: 0 0 10px;
+	}
+	&__description {
+		@include main-font;
+		line-height: 1.6;
+		width: 540px;
+		margin: 0 auto 40px;
+	}
+}
+.ba-form {
+	position: relative;
+	&__field {
+		width: 480px;
+		padding: 17px 25px;
+		border-radius: 27px;
+		border: 1px solid #fff;
+		background-color: rgba(255,255,255,.3);
+	}
+}
+.ba-form__btn {
+	position: absolute;
+	top: 0;
+	left: 52%;
+	padding: 17px 0;
+	border-style: none;
+	
+}
+input {
+	&:-moz-placeholder {
+    color: #f3f4f6;
+    @include title-font;
+    font-weight: 400;
+    font-style: 18px;
+    margin-right: 25px;
+	}
+	&::-moz-placeholder {
+    color: #f3f4f6;
+    @include title-font;
+    font-weight: 400;
+    
+	}
+	&:-ms-input-placeholder {
+    color: #f3f4f6;
+    @include title-font;
+    font-weight: 400;
+    font-style: 18px;
+	}
+	&::-webkit-input-placeholder {
+    color: #f3f4f6;
+    @include title-font;
+    font-weight: 400;
+    font-size: 18px;
+	}
+}
+
+// datales
+.ba-datails {
+	background-color: #FFF;
+	text-align: left;
+	padding: 70px 0;
+	&__title {
+		@include title-font;
+		margin: 50px 0 0;
+	}
+	&__description {
+		@include main-font;
+		font-size: 16px;
+		margin: 17px 0;
+	}
+	&__border {
+		border: 1px solid #191B29;
+		width: 550px;
+		height: 405px;
+	}
+}
+.ba-row-bottom {
+	.ba-datails__title {
+		margin: 95px 0 0;
+	}
+	.ba-btn--dark {
+		background-color: #4b4e73;
+	}
+}
+.ba-btn--dark {
+	margin: 28px 0 60px;
+}
+
+// footer
+.ba-footer {
+	background-color: #d75d0e;
+	padding: 80px 0 80px;
+	&__list {
+	}
+	&__item{
+		list-style-type: none;
+	}
+	&__link {
+		@include main-font;
+		font-size: 18px;
+		color: #FFF;
+		text-decoration: none;
+		padding: 5px 20px 0 0;
+		transition: opacity .2s ease-in;
+		&:hover {
+			opacity: .5;
+		}
+	}
+}
